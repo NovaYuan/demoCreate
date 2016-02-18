@@ -39,22 +39,22 @@ var Content = (function(){
                     localStorage[selected] = '{"item": "' + this.item + '", "link": "'+ this.link +'"}'
                 }
 
-                if($list.children().length <= 0 || $(".item-name-" + selected).length <= 0){
-                    $list.append(
-                        '<li>' +
-                        '<span class="green item-name-'+ selected +'">'+ selected +': </span><br/>' +
-                        '<span class="item-label">' +
-                        '<label class="label label-success" v-on:click="deleteItem">'+ this.item +'</label>' +
-                        '</span>' +
-                        '</li>'
-                    )
-                }else{
-                    $(".item-name-" + selected).parent().append(
-                        '<span class="item-label">' +
-                        '<label class="label label-success" v-on:click="deleteItem">'+ this.item +'</label>' +
-                        '</span>'
-                    )
-                }
+                //if($list.children().length <= 0 || $(".item-name-" + selected).length <= 0){
+                //    $list.append(
+                //        '<li>' +
+                //        '<span class="green item-name-'+ selected +'">'+ selected +': </span><br/>' +
+                //        '<span class="item-label">' +
+                //        '<label class="label label-success" v-on:click="deleteItem">'+ this.item +'</label>' +
+                //        '</span>' +
+                //        '</li>'
+                //    )
+                //}else{
+                //    $(".item-name-" + selected).parent().append(
+                //        '<span class="item-label">' +
+                //        '<label class="label label-success" v-on:click="deleteItem">'+ this.item +'</label>' +
+                //        '</span>'
+                //    )
+                //}
             },
             addLine: function(e){
                 if(e.target.value === ""){
@@ -89,6 +89,14 @@ var Content = (function(){
                         });
                     }
                 }
+            },
+            openModal: function(e){
+                var name,
+                    content,
+                    modal;
+
+                name = $(e.target).data("name");
+                modal = new Modal(name);
             },
             deleteItem: function(e){
                 var selected = $("select[name=components]").val();
