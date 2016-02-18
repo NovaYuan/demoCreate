@@ -1,0 +1,29 @@
+{
+  "name": "itemDemo",
+  "authors": [
+    "NovaYuan <qiujuan_yuan@163.com>"
+  ],
+  "description": "to create a demo fastly",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "demo"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "vue": "^1.0.16",
+    "bootstrap": "^3.3.6",
+    "requirejs": "^2.1.22",
+    "color": "^2.5.0",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
