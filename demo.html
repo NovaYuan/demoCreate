@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="utf-8">
+    <title>demo预览</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+</head>
+<body>
+<div class="header">
+    <div class="pull-left" id="site-name">
+        {{sitename}}
+    </div>
+    <div class="navbar pull-right" id="demo-nav">
+        <ul class="nav navbar-nav">
+            <li>
+                <a><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-user"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="sidebar" v-if="hadMenu">
+    <ul class="nav navbar-nav">
+        <li v-for="nav in menus"><a href="{{nav.link}}">{{nav.item}}</a></li>
+    </ul>
+</div>
+<div class="content">
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/vue/dist/vue.min.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
